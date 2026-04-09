@@ -32,7 +32,6 @@
 
 | Metric                          | User thấy? | Dùng để làm gì                                                                                 |
 | ------------------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| **Confidence %**                | [x] Có     | Minh bạch hóa độ tin cậy của chẩn đoán sự cố và chất lượng của gợi ý cứu hộ do Chatbot đưa ra. |
 | **Reasoning từng bước**         | [x] Có     | Giúp người dùng hiểu Chatbot đang xử lý gì để tăng sự tin tưởng.                               |
 | **Nút [ Gọi kỹ thuật viên ]**   | [x] Có     | Lối thoát khẩn cấp nếu người dùng thấy Chatbot không xử lý được vấn đề.                        |
 | **ETA (Thời gian chờ dự kiến)** | [x] Có     | Giảm hoảng loạn bằng cách thông báo thời gian cứu hộ đến.                                      |
