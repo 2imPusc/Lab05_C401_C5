@@ -1,0 +1,57 @@
+# Eval metrics + threshold | Nhóm C5: VinFast Rescue Chatbot
+
+## Precision hay recall?
+
+[ ] Precision — khi Chatbot nói "có" thì thực sự đúng (ít false positive)
+
+[x] **Recall — tìm được hết những cái cần tìm (ít false negative)**
+
+**Tại sao?** Vì triết lý vận hành của hệ thống là "thà gọi cứu hộ dư còn hơn bỏ sót người cần cứu". Trong các tình huống xe hết pin hoặc gặp sự cố kỹ thuật trên đường, việc không nhận diện được một yêu cầu khẩn cấp (false negative) có thể gây nguy hiểm trực tiếp cho người dùng.
+
+**Nếu sai ngược lại thì sao?** Nếu ưu tiên Precision, chatbot có thể quá khắt khe trong việc xác nhận sự cố, dẫn đến việc người dùng bị kẹt lại mà không có sự trợ giúp, gây ra sự bất tiện, lo lắng và làm giảm trải nghiệm dịch vụ của VinFast.
+
+---
+
+## Metrics table
+
+| Metric                                               | Threshold                                       | Red flag (dừng khi)                                                                                              |
+| ---------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Tỉ lệ hoàn thành (Completion Rate)**               | ≥ 90% người dùng hoàn thành yêu cầu qua bot     | < 70% (Người dùng kết thúc chatbot trước khi gọi được cứu hộ)                                                    |
+| **Thời gian xử lý (Completion Time)**                | < 60 giây từ khi bắt đầu chat đến khi phát lệnh | > 120 giây (Thời gian chờ vượt quá ngưỡng kiên nhẫn)                                                             |
+| **Độ chính xác phân loại (Classification Accuracy)** | $\geq$ 90%                                      | $\leq$ 70% (Phân loại sai sự cố của phương tiện người dùng dẫn đến gọi sai dịch vụ cứu hộ)                       |
+| **Độ trễ phản hồi chấp nhận (Target Latency)**       | < 5 giây cho mỗi phản hồi                       | > 10 giây (Gây cảm giác hệ thống bị treo và tốn quá tổng thời gian so với việc người dùng tự tìm kiếm  thủ công) |
+| **Độ chính xác vị trí (GPS Accuracy)**               | Sai số < 50m                                    | > 200m (Cứu hộ không thể tìm thấy xe dựa trên tọa độ)                                                            |
+---
+
+## Mở rộng (optional — bonus)
+
+### User-facing metrics vs internal metrics
+
+| Metric                          | User thấy? | Dùng để làm gì                                                                                 |
+| ------------------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
+| **Confidence %**                | [x] Có     | Minh bạch hóa độ tin cậy của chẩn đoán sự cố và chất lượng của gợi ý cứu hộ do Chatbot đưa ra. |
+| **Reasoning từng bước**         | [x] Có     | Giúp người dùng hiểu Chatbot đang xử lý gì để tăng sự tin tưởng.                               |
+| **Nút [ Gọi kỹ thuật viên ]**   | [x] Có     | Lối thoát khẩn cấp nếu người dùng thấy Chatbot không xử lý được vấn đề.                        |
+| **ETA (Thời gian chờ dự kiến)** | [x] Có     | Giảm hoảng loạn bằng cách thông báo thời gian cứu hộ đến.                                      |
+
+### Offline eval vs online eval
+
+| Loại        | Khi nào          | Đo gì           | Ví dụ                                                                                  |
+| ----------- | ---------------- | --------------- | -------------------------------------------------------------------------------------- |
+| **Offline** | Trước khi deploy | Phân loại sự cố | Chạy 100 kịch bản lỗi (hết pin, lốp) để đo độ chính xác của LLM.                       |
+| **Online**  | Sau khi deploy   | Learning signal | So sánh phương án Chatbot gợi ý với thực tế kỹ thuật viên thực hiện (User correction). |
+
+### A/B test design
+
+| Test                   | Variant A        | Variant B             | Metric theo dõi               | Kết quả mong đợi                                           |
+| ---------------------- | ---------------- | --------------------- | ----------------------------- | ---------------------------------------------------------- |
+| **Hiển thị Reasoning** | Chỉ hiện kết quả | Hiện logic suy luận   | Trust score / Completion rate | Người dùng kiên nhẫn hơn khi thấy Chatbot đang "suy nghĩ". |
+| **Xác thực vị trí**    | GPS tự động      | Nhập địa chỉ thủ công | Time to completion            | GPS tự động giúp giảm thời gian xuống dưới 60 giây.        |
+
+### Câu hỏi mở rộng
+
+- **Metric đo được sớm nhất:** Độ trễ API (Latency) và Độ chính xác vị trí GPS có thể đo ngay từ bản Prototype.
+- **Nếu chỉ chọn 1 metric duy nhất:** Chọn **Completion Rate (≥ 90%)** vì đây là thước đo trực tiếp cho việc giảm tải tổng đài và tiết kiệm thời gian cho người dùng.
+- **Metric bị "game":** Completion rate có thể cao nếu bot ép người dùng kết thúc phiên chat mà không giải quyết được vấn đề thực sự. Do đó, cần kiểm tra chéo với **Technician correction signal**.
+
+---
