@@ -7,6 +7,7 @@ from enum import Enum
 class AppState(str, Enum):
     SELECT_ISSUE = "select_issue"
     CLASSIFYING = "classifying"
+    LOW_CONFIDENCE = "low_confidence"
     SELF_SERVICE_CHAT = "self_service_chat"
     RESCUE_COLLECT_INFO = "rescue_collect_info"
     RESCUE_CONFIRM_INFO = "rescue_confirm_info"
@@ -28,6 +29,8 @@ def init_session_state():
         "rescue_info": None,
         "rescue_service": None,
         "rescue_proposal_text": None,
+        "correction_count": 0,
+        "csat_rating": None,
     }
     for key, value in defaults.items():
         if key not in st.session_state:

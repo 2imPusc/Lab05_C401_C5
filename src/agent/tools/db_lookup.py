@@ -43,8 +43,9 @@ def search_troubleshoot(query: str) -> str:
 
     if best_match:
         return (
-            f"**Vấn đề: {best_match['issue']}** (Mức độ: {best_match['severity']})\n\n"
-            f"{best_match['guide']}"
+            f"**[{best_match['id']}] {best_match['issue']}** (Mức độ: {best_match['severity']})\n\n"
+            f"{best_match['guide']}\n\n"
+            f"_Nguồn: {best_match['id']} — {best_match['issue']}_"
         )
     return "Không tìm thấy hướng dẫn phù hợp trong cơ sở dữ liệu. Vui lòng mô tả chi tiết hơn hoặc gọi hotline 1900-23-23-89."
 
