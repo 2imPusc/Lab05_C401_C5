@@ -5,7 +5,7 @@ from config import ISSUE_OPTIONS
 
 
 def render_option_selector() -> int | None:
-    """Hiển thị 4 nút chọn vấn đề (grid 2×2). Trả về option đã chọn hoặc None."""
+    """Hiển thị 4 nút chọn vấn đề (grid 2x2). Trả về option đã chọn hoặc None."""
     st.markdown("### Bạn gặp vấn đề gì?")
 
     col1, col2 = st.columns(2)

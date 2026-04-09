@@ -15,7 +15,7 @@ def _load_json(filename: str) -> list:
 
 def _haversine(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """Khoảng cách (km) giữa 2 tọa độ."""
-    R = 6371
+    R = 6371 # cái này là bán kính trung bình của Trái Đất (km)
     dlat = math.radians(lat2 - lat1)
     dlon = math.radians(lon2 - lon1)
     a = (math.sin(dlat / 2) ** 2
@@ -35,6 +35,9 @@ def search_troubleshoot(query: str) -> str:
     best_match = None
     best_score = 0
 
+    # loop qua tất cả loại vấn đề trong troubleshoot_kb.json
+    # từng vấn đề đều có keyword. Vấn đề nào match nhiều keyword trong query nhất,
+    # thì classifier là vấn đề đó
     for entry in kb:
         score = sum(1 for kw in entry["keywords"] if kw in query_lower)
         if score > best_score:
@@ -49,6 +52,7 @@ def search_troubleshoot(query: str) -> str:
     return "Không tìm thấy hướng dẫn phù hợp trong cơ sở dữ liệu. Vui lòng mô tả chi tiết hơn hoặc gọi hotline 1900-23-23-89."
 
 
+# Kiếm 3 trạm sạc gần nhất rồi trả lại
 @tool
 def find_nearest_stations(latitude: float, longitude: float, service_type: str = "all") -> str:
     """Tìm trạm sạc/bảo hành/cứu hộ VinFast gần nhất.

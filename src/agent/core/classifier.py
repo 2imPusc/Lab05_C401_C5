@@ -14,6 +14,7 @@ def classify_issue(issue_option: int, user_description: str = "") -> dict:
     Returns:
         {"severity": "self_serviceable"|"needs_rescue", "reason": "..."}
     """
+
     option_map = {
         1: "Hết pin / hết xăng",
         2: "Hỏng máy / lỗi kỹ thuật",
@@ -46,3 +47,4 @@ def classify_issue(issue_option: int, user_description: str = "") -> dict:
             result = {"severity": "self_serviceable", "reason": "Vấn đề có thể tự xử lý với hướng dẫn"}
 
     return result
+
