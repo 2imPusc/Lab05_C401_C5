@@ -298,7 +298,7 @@ elif state == AppState.RESCUE_PROPOSAL:
             st.session_state.rescue_service = rescue
             proposal_text = format_rescue_proposal(info, rescue, issue_label)
             st.session_state.rescue_proposal_text = proposal_text
-            add_message("assistant", proposal_text)
+            # add_message("assistant", proposal_text)
             st.rerun()
     else:
         # Hiển thị đề xuất
