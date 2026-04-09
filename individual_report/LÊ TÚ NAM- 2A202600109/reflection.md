@@ -12,7 +12,7 @@
 -Đưa ra các vấn đề mà hệ thống còn thiếu(Feedback và cách sử dụng của FeedBack Data).
 *Spech mạnh yếu:
 -Mạnh nhất: Nhóm đã phát hiện vấn để AI halluciation khi không có data cụ thể. Fix bằng cách sửa system prompt.
--Yếu nhất: Do data fake nên chi phí ROI không chuẩn, chưa áp dụng được vào thực tế
+-Yếu nhất: - Đoán giá hơi khó vì không có metric cụ thể, và nếu đoán giá rẻ nhiều hơn so với thực tế thì sẽ gây mất lòng người dùng
 *Đóng góp khác:
 -Thêm ý tưởng cho các prompt out of the box để test hệ thống
 -Giúp nhóm sửa các luồng UX/UI khớp với hệ thống backend.
