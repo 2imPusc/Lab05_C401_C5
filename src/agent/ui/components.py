@@ -117,3 +117,38 @@ def render_rescue_cancelled():
         "Đã hủy yêu cầu cứu hộ.\n\n"
         "Bạn có thể quay lại chọn vấn đề khác hoặc gọi hotline **1900-23-23-89** bất cứ lúc nào."
     )
+
+
+def render_low_confidence():
+    """Hiển thị UI khi AI không đủ tin cậy để chẩn đoán."""
+    st.warning(
+        "🤔 **Tôi chưa thể chẩn đoán chính xác sự cố của bạn.**\n\n"
+        "_Mô tả hiện tại chưa đủ thông tin kỹ thuật để xác định nguyên nhân. "
+        "Vì lý do an toàn, tôi khuyên bạn nên liên hệ kỹ thuật viên._"
+    )
+
+    st.markdown("### Bạn muốn làm gì tiếp?")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("📞 Nối máy kỹ thuật viên", key="lc_technician", type="primary", use_container_width=True):
+            return "technician"
+    with col2:
+        if st.button("💬 Thử mô tả lại", key="lc_retry", use_container_width=True):
+            return "retry"
+
+    return None
+
+
+def render_csat_rating() -> int | None:
+    """Hiển thị widget đánh giá CSAT 1-5 sao."""
+    st.markdown("---")
+    st.markdown("### ⭐ Đánh giá trải nghiệm")
+    st.markdown("Bạn hài lòng với hỗ trợ của AI như thế nào?")
+
+    cols = st.columns(5)
+    for i, col in enumerate(cols, 1):
+        with col:
+            if st.button(f"{'⭐' * i}", key=f"csat_{i}", use_container_width=True):
+                return i
+    return None

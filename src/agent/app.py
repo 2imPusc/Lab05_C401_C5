@@ -12,6 +12,8 @@ from ui.components import (
     render_rescue_proposal,
     render_rescue_confirmed,
     render_rescue_cancelled,
+    render_low_confidence,
+    render_csat_rating,
 )
 from core.classifier import classify_issue
 from core.react_agent import create_react_agent_executor, run_react_agent
@@ -68,6 +70,7 @@ with st.sidebar:
     state_labels = {
         AppState.SELECT_ISSUE: "⏳ Chọn vấn đề",
         AppState.CLASSIFYING: "🔄 Đang phân loại...",
+        AppState.LOW_CONFIDENCE: "🤔 Cần thêm thông tin",
         AppState.SELF_SERVICE_CHAT: "💬 Chat troubleshoot",
         AppState.RESCUE_COLLECT_INFO: "📋 Thu thập thông tin",
         AppState.RESCUE_CONFIRM_INFO: "✅ Xác nhận thông tin",
@@ -118,7 +121,17 @@ elif state == AppState.CLASSIFYING:
         classification = classify_issue(issue_option)
         st.session_state.classification = classification
 
-    if classification["severity"] == "self_serviceable":
+    confidence = classification.get("confidence", "medium")
+
+    if confidence == "low":
+        add_message("assistant",
+            f"🤔 **Tôi chưa thể chẩn đoán chính xác.**\n\n"
+            f"_{classification['reason']}_\n\n"
+            f"Mô tả hiện tại chưa đủ thông tin kỹ thuật. Vì lý do an toàn, "
+            f"tôi khuyên bạn nên liên hệ kỹ thuật viên hoặc mô tả lại chi tiết hơn."
+        )
+        set_state(AppState.LOW_CONFIDENCE)
+    elif classification["severity"] == "self_serviceable":
         add_message("assistant",
             f"🔧 **Đánh giá:** Vấn đề này có thể tự xử lý.\n\n"
             f"_{classification['reason']}_\n\n"
@@ -134,6 +147,37 @@ elif state == AppState.CLASSIFYING:
         set_state(AppState.RESCUE_COLLECT_INFO)
 
     st.rerun()
+
+# ─── State: LOW_CONFIDENCE ──────────────────────────
+elif state == AppState.LOW_CONFIDENCE:
+    for msg in get_messages():
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
+
+    choice = render_low_confidence()
+
+    if choice == "technician":
+        add_message("assistant",
+            "📞 **Đang kết nối kỹ thuật viên...**\n\n"
+            "Kỹ thuật viên VinFast sẽ liên hệ bạn trong vòng **1 phút**.\n\n"
+            "📞 Hoặc gọi ngay: **1900-23-23-89**"
+        )
+        set_state(AppState.RESCUE_CONFIRMED)
+        st.rerun()
+    elif choice == "retry":
+        # Tăng correction_count — nếu >= 3 lần thì tự động chuyển kỹ thuật viên
+        st.session_state.correction_count += 1
+        if st.session_state.correction_count >= 3:
+            add_message("assistant",
+                "🔄 Bạn đã thử mô tả lại nhiều lần. "
+                "Để tiết kiệm thời gian, tôi sẽ kết nối bạn với kỹ thuật viên chuyên môn ngay."
+            )
+            set_state(AppState.RESCUE_CONFIRMED)
+            st.rerun()
+        else:
+            add_message("assistant", "Hãy mô tả lại chi tiết hơn về sự cố (VD: tiếng kêu ở đâu, màn hình báo gì, xe có di chuyển được không?)")
+            set_state(AppState.SELF_SERVICE_CHAT)
+            st.rerun()
 
 # ─── State: SELF_SERVICE_CHAT ────────────────────────
 elif state == AppState.SELF_SERVICE_CHAT:
@@ -254,7 +298,7 @@ elif state == AppState.RESCUE_PROPOSAL:
             st.session_state.rescue_service = rescue
             proposal_text = format_rescue_proposal(info, rescue, issue_label)
             st.session_state.rescue_proposal_text = proposal_text
-            add_message("assistant", proposal_text)
+            # add_message("assistant", proposal_text)
             st.rerun()
     else:
         # Hiển thị đề xuất
@@ -275,9 +319,29 @@ elif state == AppState.RESCUE_CONFIRMED:
             st.markdown(msg["content"])
     render_rescue_confirmed()
 
+    # CSAT rating
+    if st.session_state.csat_rating is None:
+        rating = render_csat_rating()
+        if rating:
+            st.session_state.csat_rating = rating
+            st.success(f"Cảm ơn bạn đã đánh giá {rating}/5 ⭐!")
+            st.rerun()
+    else:
+        st.markdown(f"---\n_Bạn đã đánh giá: {'⭐' * st.session_state.csat_rating} ({st.session_state.csat_rating}/5)_")
+
 # ─── State: RESCUE_CANCELLED ─────────────────────────
 elif state == AppState.RESCUE_CANCELLED:
     for msg in get_messages():
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
     render_rescue_cancelled()
+
+    # CSAT rating
+    if st.session_state.csat_rating is None:
+        rating = render_csat_rating()
+        if rating:
+            st.session_state.csat_rating = rating
+            st.success(f"Cảm ơn bạn đã đánh giá {rating}/5 ⭐!")
+            st.rerun()
+    else:
+        st.markdown(f"---\n_Bạn đã đánh giá: {'⭐' * st.session_state.csat_rating} ({st.session_state.csat_rating}/5)_")
