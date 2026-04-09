@@ -22,15 +22,18 @@
 
 ## Learning signal
 
-| #   | Câu hỏi                                                                                                   | Trả lời                                                                                                          |
-| --- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 1   | User correction đi vào đâu?                                                                               | Lưu vào Database để phân loại các dạng lỗi (Failure Mode Library) và dùng làm dữ liệu tinh chỉnh (Fine-tuning)^^ |
-| 2   | Product thu signal gì để biết tốt lên hay tệ đi?                                                          |                                                                                                                  |
-| 3   | Data thuộc loại nào? ☐ User-specific · ☐ Domain-specific · ☐ Real-time · ☐ Human-judgment · ☐ Khác:\_\_\_ |                                                                                                                  |
+| #   | Câu hỏi                                                                                                   | Trả lời                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| --- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | User correction đi vào đâu?                                                                               | Lưu vào Database để phân loại các dạng lỗi (Failure Mode Library) và dùng làm dữ liệu tinh chỉnh (Fine-tuning)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 2   | Product thu signal gì để biết tốt lên hay tệ đi?                                                          | **Tín hiệu tốt** (Positive Signals - Model đang làm tốt), tỷ lệ chuyển đổi (Conversion Rate) tăng, user click chọn ngay các thẻ vé (Cards) do AI gợi ý ở câu lệnh đầu tiên (First-prompt success rate). Thời gian (Latency/Time-to-checkout) từ lúc gõ câu lệnh đến lúc hoàn tất thanh toán giảm.<br>**Tín hiệu xấu** (Negative Signals - Model đang làm tệ): User phải gõ/sửa lại câu lệnh nhiều lần. User phải chỉnh sửa lại các trường thông tin (điểm đi, điểm đến, ngày bay) ở bước Xác nhận (Confirm) do AI trích xuất sai. User bỏ qua gợi ý của AI và quay lại dùng bộ lọc thủ công truyền thống. Tỷ lệ thoát (Drop-off rate) ở bước hiển thị kết quả cao. |
+| 3   | Data thuộc loại nào? ☐ User-specific · ☐ Domain-specific · ☐ Real-time · ☐ Human-judgment · ☐ Khác:\_\_\_ | **Domain-specific**: Dữ liệu đặc thù của ngành hàng không (cách người Việt gọi tên sân bay, mã IATA, từ lóng, cách viết tắt ngày tháng/dịp lễ Tết).<br> **Human-judgment**: Quyết định của user ở bước cuối cùng (click chọn vé nào, sửa thông tin gì) chính là nhãn dán (label) chất lượng nhất để đánh giá AI đúng hay sai. <br> **User-specific** (tùy chọn thêm): Lịch sử hành vi, sở thích bay (thích bay sáng/tối, thích hãng giá rẻ hay VNA) của từng khách hàng cụ thể để cá nhân hóa gợi ý thẻ vé.                                                                                                                                                        |
 
 **Có marginal value không?** (Model đã biết cái này chưa? Ai khác cũng thu được data này không?)
+Có Marginal Value rất cao.
 
----
+Justify: Các mô hình LLM nền tảng (Foundation Models) có thể hiểu ngôn ngữ tự nhiên cơ bản, nhưng chúng không nắm bắt được thói quen gõ tìm kiếm, các lỗi sai phổ biến (Failure Modes) và hành vi chốt đơn đặc thù của tệp khách hàng nội địa trên hệ thống của bạn.
+
+Dữ liệu sửa lỗi từ UI (User thao tác sửa ngày, đổi chuyến) là dữ liệu độc quyền (Proprietary data) sinh ra từ luồng sản phẩm của riêng bạn, các đối thủ cạnh tranh hoặc các LLM chung chung bên ngoài không thể tự nhiên có được để fine-tune.
 
 ---
 
@@ -41,7 +44,3 @@
 3. Feasibility: ước lượng cost, không cần chính xác — order of magnitude đủ
 4. Learning signal: nghĩ về vòng lặp dài hạn, không chỉ demo ngày mai
 5. Đánh [?] cho chỗ chưa biết — Canvas là hypothesis, không phải đáp án
-
----
-
-_AI Product Canvas — Ngày 5 — VinUni A20 — AI Thực Chiến · 2026_
