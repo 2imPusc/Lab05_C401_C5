@@ -29,7 +29,7 @@ Liệt kê các tình huống đặc biệt mà hệ thống AI có thể gặp 
 
 | Edge case (Tình huống) | Dự đoán AI sẽ xử lý thế nào | UX nên phản ứng ra sao |
 |------------------------|------------------------------|------------------------|
-| **User hoảng loạn, nhắn tin chửi thề / không rõ nghĩa** (VD: "Xe tự nhiên hỏng rồi làm sao đây!!!") | AI phân tích Sentiment (cảm xúc) → nhận diện mức độ khẩn cấp, stress cao nhưng thiếu thông tin kỹ thuật để chẩn đoán. | Tạm ngưng luồng hỏi đáp dài dòng. UI lập tức đổi màu cảnh báo (Đỏ), hiện nút bấm to `[Gọi SOS Khẩn Cấp]` và tự động đính kèm vị trí GPS. |
+| **User hoảng loạn, nhắn tin chửi thề / không rõ nghĩa** (VD: "Xe tự nhiên hỏng rồi làm sao đây!!!") | Ai giúp tránh những cuốc tranh cãi với tổng đài. | Tạm ngưng luồng hỏi đáp dài dòng. UI lập tức đổi màu cảnh báo (Đỏ), hiện nút bấm to `[Gọi SOS Khẩn Cấp]` và tự động đính kèm vị trí GPS. |
 | **Xe ở khu vực đèo núi, hầm ngầm mất sóng Internet (3G/4G/5G)** | AI (hoạt động trên Cloud) không thể kết nối, gọi API bị timeout hoặc báo lỗi mạng. | App tự động fallback (chuyển) sang chế độ "Cẩm nang offline", hiển thị hướng dẫn tự cứu hộ cơ bản và số điện thoại Hotline tổng đài (gọi bằng sóng viễn thông thông thường). |
 | **User không có kiến thức về xe, không biết mô tả triệu chứng** (Chỉ biết là xe không chạy được) | AI không đủ dữ kiện ban đầu để chẩn đoán và có thể sẽ hỏi lại bằng những từ ngữ quá kỹ thuật. | UI cung cấp các thẻ lựa chọn (Chips) trực quan có kèm hình ảnh thay vì bắt user tự gõ text: `[Xe bốc khói]`, `[Màn hình đen]`, `[Bẹp lốp]`, `[Xe báo đèn đỏ]`, giúp định hướng thông tin đầu vào. |
 
