@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ST001",
+    "name": "VinFast Service Center - Hải Phòng",
+    "address": "Khu kinh tế Đình Vũ – Cát Hải, Hải Phòng",
+    "lat": 20.8283,
+    "lon": 106.7248,
+    "type": ["bảo hành", "sạc", "cứu hộ"],
+    "phone": "1900-23-23-89",
+    "hours": "08:00 - 20:00"
+  },
+  {
+    "id": "ST002",
+    "name": "VinFast Service Center - Hà Nội (Mỹ Đình)",
+    "address": "Phạm Hùng, Nam Từ Liêm, Hà Nội",
+    "lat": 21.0285,
+    "lon": 105.7823,
+    "type": ["bảo hành", "sạc"],
+    "phone": "1900-23-23-89",
+    "hours": "08:00 - 21:00"
+  },
+  {
+    "id": "ST003",
+    "name": "VinFast Service Center - TP.HCM (Quận 7)",
+    "address": "Nguyễn Hữu Thọ, Quận 7, TP.HCM",
+    "lat": 10.7352,
+    "lon": 106.7220,
+    "type": ["bảo hành", "sạc", "cứu hộ"],
+    "phone": "1900-23-23-89",
+    "hours": "07:00 - 22:00"
+  },
+  {
+    "id": "ST004",
+    "name": "Trạm sạc VinFast - Vincom Bà Triệu",
+    "address": "191 Bà Triệu, Hai Bà Trưng, Hà Nội",
+    "lat": 21.0115,
+    "lon": 105.8490,
+    "type": ["sạc"],
+    "phone": "1900-23-23-89",
+    "hours": "06:00 - 23:00"
+  },
+  {
+    "id": "ST005",
+    "name": "Trạm sạc VinFast - Landmark 81",
+    "address": "Vinhomes Central Park, Bình Thạnh, TP.HCM",
+    "lat": 10.7942,
+    "lon": 106.7219,
+    "type": ["sạc"],
+    "phone": "1900-23-23-89",
+    "hours": "00:00 - 23:59"
+  },
+  {
+    "id": "ST006",
+    "name": "VinFast Service Center - Đà Nẵng",
+    "address": "Nguyễn Sinh Sắc, Liên Chiểu, Đà Nẵng",
+    "lat": 16.0718,
+    "lon": 108.1530,
+    "type": ["bảo hành", "sạc", "cứu hộ"],
+    "phone": "1900-23-23-89",
+    "hours": "08:00 - 20:00"
+  },
+  {
+    "id": "ST007",
+    "name": "Đội cứu hộ VinFast - Hà Nội",
+    "address": "Hà Nội (lưu động)",
+    "lat": 21.0285,
+    "lon": 105.8542,
+    "type": ["cứu hộ"],
+    "phone": "1900-23-23-89",
+    "hours": "00:00 - 23:59"
+  },
+  {
+    "id": "ST008",
+    "name": "Đội cứu hộ VinFast - TP.HCM",
+    "address": "TP.HCM (lưu động)",
+    "lat": 10.7769,
+    "lon": 106.7009,
+    "type": ["cứu hộ"],
+    "phone": "1900-23-23-89",
+    "hours": "00:00 - 23:59"
+  }
+]

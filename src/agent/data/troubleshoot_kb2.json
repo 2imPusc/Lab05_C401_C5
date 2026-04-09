@@ -1,0 +1,786 @@
+[
+    {
+        "id": 1,
+        "title": "Ắc quy hết điện (xe không nổ máy)",
+        "scenario": "Xe không khởi động được, đèn nội thất mờ, còi kêu yếu.",
+        "sample_user_queries": [
+            "Xe không nổ máy, đèn mờ, chắc hết bình rồi phải làm sao?",
+            "Ắc quy hết điện, cách câu bình như thế nào?",
+            "Xe chết máy vì hết bình, tự xử lý được không?"
+        ],
+        "signs": "Đèn trong xe mờ hoặc không sáng, còi kêu yếu, động cơ không quay khi vặn chìa khóa.",
+        "causes": "Quên tắt đèn hoặc thiết bị điện khi tắt máy, ắc quy cũ/hỏng, để xe lâu không chạy.",
+        "steps": [
+            "1. Kiểm tra xem có quên tắt đèn, radio, điều hòa không. Tắt hết các thiết bị điện.",
+            "2. Chuẩn bị dây câu bình (dây đỏ cho cực dương +, dây đen cho cực âm -).",
+            "3. Đỗ xe hỗ trợ gần xe bạn (cả hai xe tắt máy).",
+            "4. Nối dây theo thứ tự: Đỏ (+) xe bạn → Đỏ (+) xe hỗ trợ → Đen (-) xe hỗ trợ → Đen (-) xe bạn (hoặc mass kim loại sạch).",
+            "5. Khởi động xe hỗ trợ chạy 5-10 phút, sau đó thử khởi động xe bạn.",
+            "6. Sau khi nổ máy, chạy xe ít nhất 20-30 phút để ắc quy sạc lại."
+        ],
+        "warnings": "Không để dây chạm nhau gây chập. Nối đúng cực (+) và (-). Không hút thuốc hoặc tạo lửa gần ắc quy. Nếu không có xe hỗ trợ, dùng bộ kích bình (jump starter).",
+        "when_to_call_help": "Nếu câu bình nhiều lần vẫn không nổ, hoặc ắc quy cũ (trên 3-4 năm), cần thay ắc quy mới.",
+        "bot_response_template": "Xe hết bình ắc quy rồi nhé! Giữ bình tĩnh, bạn có dây câu bình không? Hãy làm theo các bước sau: [dán steps]. Lưu ý an toàn quan trọng: [dán warnings]. Sau khi nổ máy, chạy xe một lúc để sạc bình. Nếu vẫn không được, cho mình biết thêm triệu chứng để hỗ trợ!"
+    },
+    {
+        "id": 2,
+        "title": "Cầu chì bị đứt",
+        "scenario": "Một số thiết bị điện (đèn, radio, cửa sổ, điều hòa...) không hoạt động.",
+        "sample_user_queries": [
+            "Đèn xe không sáng, chắc cầu chì đứt phải không?",
+            "Cầu chì bị hỏng thì thay thế thế nào?",
+            "Radio và đèn nội thất không chạy, xử lý sao?"
+        ],
+        "signs": "Thiết bị điện cụ thể không hoạt động (đèn, radio, gạt mưa, cửa sổ điện...).",
+        "causes": "Quá tải điện, chập mạch, cầu chì kém chất lượng.",
+        "steps": [
+            "1. Tìm hộp cầu chì (thường ở khoang động cơ hoặc dưới taplo, xem sơ đồ trên nắp hộp).",
+            "2. Kiểm tra cầu chì bằng mắt (dây kim loại bên trong đứt) hoặc dùng que thử.",
+            "3. Thay cầu chì mới có cùng amper (A) với cầu chì cũ (thường có que dự phòng trong hộp).",
+            "4. Sau khi thay, kiểm tra thiết bị có hoạt động lại không."
+        ],
+        "warnings": "Tắt máy và ngắt ắc quy trước khi thay. Dùng cầu chì đúng thông số, không dùng giấy nhôm hoặc dây thay thế.",
+        "when_to_call_help": "Nếu thay cầu chì mới vẫn đứt ngay, có thể bị chập mạch nghiêm trọng.",
+        "bot_response_template": "Có vẻ cầu chì bị đứt. Bạn mở nắp hộp cầu chì và kiểm tra theo hướng dẫn này: [dán steps]. Nhớ dùng cầu chì đúng amper nhé!"
+    },
+    {
+        "id": 3,
+        "title": "Hệ thống đèn gặp vấn đề (đèn không sáng, mờ)",
+        "scenario": "Đèn pha, đèn hậu, đèn xi-nhan không sáng hoặc sáng yếu.",
+        "sample_user_queries": [
+            "Đèn pha xe không sáng, phải làm gì?",
+            "Đèn xi nhan nháy nhanh, chắc bóng đèn hỏng?",
+            "Đèn xe mờ, thay bóng đèn như thế nào?"
+        ],
+        "signs": "Đèn không sáng, nhấp nháy, mờ, hoặc chỉ một bên sáng.",
+        "causes": "Bóng đèn cháy, đui tiếp xúc kém, dây đứt, công tắc hỏng.",
+        "steps": [
+            "1. Kiểm tra cầu chì liên quan đến đèn.",
+            "2. Thay bóng đèn mới (tắt đèn trước khi thay, tránh chạm tay vào bóng halogen).",
+            "3. Vệ sinh đui đèn và chân tiếp xúc nếu bị oxy hóa.",
+            "4. Kiểm tra dây điện nếu có thể nhìn thấy."
+        ],
+        "warnings": "Không thay bóng đèn khi đang nóng. Dùng bóng đúng công suất và loại (Halogen/LED).",
+        "when_to_call_help": "Nếu thay bóng vẫn không sáng hoặc nhiều đèn hỏng cùng lúc.",
+        "bot_response_template": "Đèn xe bị vấn đề rồi. Thử kiểm tra và thay bóng đèn theo các bước sau: [dán steps]."
+    },
+    {
+        "id": 4,
+        "title": "Hệ thống khởi động (đề) không hoạt động",
+        "scenario": "Vặn chìa khóa hoặc nhấn nút Start, không có tiếng đề hoặc động cơ không quay.",
+        "sample_user_queries": [
+            "Nhấn nút đề không nổ, không có tiếng gì cả.",
+            "Xe không đề được, có phải hỏng củ đề không?"
+        ],
+        "signs": "Không có tiếng “cạch” hoặc tiếng đề quay khi khởi động.",
+        "causes": "Ắc quy yếu, hỏng đề, hỏng rơ-le, dây đứt.",
+        "steps": [
+            "1. Kiểm tra ắc quy (câu bình nếu yếu).",
+            "2. Kiểm tra các đầu nối ắc quy có sạch và siết chặt không.",
+            "3. Thử gõ nhẹ củ đề (nếu biết vị trí) để loại trừ kẹt tạm thời."
+        ],
+        "warnings": "Không thử đề liên tục quá 5 giây/lần để tránh hỏng đề.",
+        "when_to_call_help": "Nếu đã câu bình mà vẫn không đề được.",
+        "bot_response_template": "Hệ thống đề có vấn đề. Trước tiên thử kiểm tra ắc quy và câu bình theo hướng dẫn trước. Nếu vẫn không được, cần đưa xe đến gara kiểm tra củ đề."
+    },
+    {
+        "id": 5,
+        "title": "Hệ thống sạc (máy phát) không hoạt động",
+        "scenario": "Đèn báo ắc quy sáng trên taplo, ắc quy nhanh hết.",
+        "sample_user_queries": [
+            "Đèn báo bình ắc quy sáng, xe chạy một lúc lại hết bình.",
+            "Máy phát điện xe bị hỏng phải làm sao?"
+        ],
+        "signs": "Đèn báo ắc quy bật sáng khi máy đang chạy, ắc quy hết nhanh.",
+        "causes": "Dây curoa đứt, hỏng máy phát, hỏng regulator.",
+        "steps": [
+            "1. Tắt máy, mở capo kiểm tra dây curoa (dây đai) có đứt hoặc lỏng không.",
+            "2. Nếu dây curoa đứt → thay dây dự phòng (nếu có) hoặc kéo xe đến gara."
+        ],
+        "warnings": "Không chạy xe nếu dây curoa đứt (sẽ làm hỏng ắc quy và các hệ thống khác).",
+        "when_to_call_help": "Hầu hết trường hợp cần gara kiểm tra máy phát.",
+        "bot_response_template": "Đèn báo ắc quy sáng nghĩa là hệ thống sạc có vấn đề. Hãy kiểm tra dây curoa trước. Nếu đứt thì không nên chạy tiếp, gọi cứu hộ nhé!"
+    },
+    {
+        "id": 6,
+        "title": "Cửa sổ điện không hoạt động",
+        "scenario": "Cửa sổ không lên/xuống được, có tiếng kêu lạ.",
+        "sample_user_queries": [
+            "Cửa sổ điện không lên, phải kiểm tra gì?",
+            "Cửa kính xe bị kẹt không đóng mở được."
+        ],
+        "signs": "Cửa sổ không di chuyển, tiếng kêu lạ từ mô tơ.",
+        "causes": "Cầu chì đứt, công tắc hỏng, mô tơ hỏng, dây đứt.",
+        "steps": [
+            "1. Kiểm tra cầu chì của cửa sổ điện.",
+            "2. Thử công tắc của các cửa khác xem có hoạt động không.",
+            "3. Kiểm tra các kết nối dây nếu có thể."
+        ],
+        "warnings": "Không dùng lực mạnh đẩy cửa kính.",
+        "when_to_call_help": "Nếu thay cầu chì vẫn không được.",
+        "bot_response_template": "Cửa sổ điện bị lỗi. Bắt đầu bằng việc kiểm tra cầu chì theo hướng dẫn số 2. Nếu không được, cần gara kiểm tra mô tơ."
+    },
+    {
+        "id": 7,
+        "title": "Hệ thống khóa trung tâm bị lỗi",
+        "scenario": "Không khóa/mở cửa bằng remote hoặc nút bấm.",
+        "sample_user_queries": [
+            "Remote xe không khóa cửa được.",
+            "Khóa trung tâm xe bị hỏng, phải làm sao?"
+        ],
+        "signs": "Remote không phản hồi, nút bấm trong xe không hoạt động.",
+        "causes": "Hết pin remote, hỏng ăng-ten, lỗi mạch.",
+        "steps": [
+            "1. Thay pin remote mới.",
+            "2. Thử khóa/mở bằng chìa cơ.",
+            "3. Kiểm tra cầu chì hệ thống khóa nếu có."
+        ],
+        "warnings": "Không để xe không khóa khi rời đi.",
+        "when_to_call_help": "Nếu thay pin vẫn không được.",
+        "bot_response_template": "Khóa trung tâm lỗi. Trước tiên thay pin remote thử xem. Nếu vẫn không, có thể cần kiểm tra ăng-ten hoặc mang xe đến gara."
+    },
+    {
+        "id": 8,
+        "title": "Hệ thống âm thanh không hoạt động",
+        "scenario": "Radio/loa không có tiếng, âm thanh rè hoặc chỉ một bên loa chạy.",
+        "sample_user_queries": [
+            "Radio xe không lên tiếng gì cả.",
+            "Loa xe bị rè hoặc không hoạt động."
+        ],
+        "signs": "Không có âm thanh, tiếng rè, hoặc loa chỉ hoạt động một bên.",
+        "causes": "Cầu chì đứt, dây loa đứt, hỏng amply/loa.",
+        "steps": [
+            "1. Kiểm tra cầu chì của hệ thống âm thanh.",
+            "2. Kiểm tra kết nối dây loa (nếu có thể tháo).",
+            "3. Thử reset đầu radio (tắt máy, ngắt ắc quy 5-10 phút)."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Nếu không phải cầu chì.",
+        "bot_response_template": "Hệ thống âm thanh lỗi. Hãy kiểm tra cầu chì trước. Nếu vẫn không, cần kiểm tra chi tiết hơn tại gara."
+    },
+    {
+        "id": 9,
+        "title": "Cụm đồng hồ (taplo) không hoạt động",
+        "scenario": "Đồng hồ tốc độ, tua máy, đèn báo không sáng.",
+        "sample_user_queries": [
+            "Cụm đồng hồ xe tắt ngúm, không hiển thị gì.",
+            "Taplo xe không sáng khi bật chìa khóa."
+        ],
+        "signs": "Toàn bộ hoặc một phần cụm đồng hồ không hoạt động.",
+        "causes": "Cầu chì đứt, lỗi mạch, hỏng cụm đồng hồ.",
+        "steps": [
+            "1. Kiểm tra cầu chì của cụm đồng hồ (thường có trên sơ đồ hộp cầu chì).",
+            "2. Thử ngắt ắc quy 10 phút rồi nối lại để reset."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Nếu không phải do cầu chì.",
+        "bot_response_template": "Cụm đồng hồ bị lỗi. Kiểm tra cầu chì liên quan trước nhé. Nếu vẫn không sáng, cần gara chẩn đoán."
+    },
+    {
+        "id": 10,
+        "title": "Hệ thống điều hòa không hoạt động",
+        "scenario": "Điều hòa không mát, không có gió, có tiếng kêu lạ.",
+        "sample_user_queries": [
+            "Điều hòa xe không mát, phải làm gì?",
+            "Quạt gió điều hòa không chạy."
+        ],
+        "signs": "Không có gió thổi, không mát, tiếng kêu lạ.",
+        "causes": "Cầu chì đứt, hết gas, hỏng quạt gió, hỏng lốc.",
+        "steps": [
+            "1. Kiểm tra cầu chì của điều hòa và quạt gió.",
+            "2. Kiểm tra xem quạt gió có chạy không (bật max).",
+            "3. Nếu có gió nhưng không mát → có thể hết gas (cần gara nạp)."
+        ],
+        "warnings": "Không tự mở hệ thống gas điều hòa nếu không có dụng cụ chuyên dụng.",
+        "when_to_call_help": "Hầu hết trường hợp cần gara (nạp gas, thay lốc...).",
+        "bot_response_template": "Điều hòa xe gặp vấn đề. Trước tiên kiểm tra cầu chì. Nếu quạt không chạy thì là lỗi điện, nếu có gió nhưng không mát thì cần nạp gas tại gara."
+    },
+    {
+        "id": 11,
+        "title": "Lốp xe bị xẹp hoặc đèn báo áp suất lốp sáng",
+        "scenario": "Lốp xì hơi, xe rung lắc, đèn TPMS sáng trên màn hình VinFast.",
+        "sample_user_queries": [
+            "Đèn báo lốp xe VF sáng",
+            "Lốp VF5 bị xẹp giữa đường",
+            "Xe điện VinFast rung mạnh"
+        ],
+        "signs": "Đèn TPMS sáng, xe lệch một bên, rung vô lăng.",
+        "causes": "Đinh, va chạm, lốp non hơi lâu ngày.",
+        "steps": [
+            "1. Dừng xe ở vị trí an toàn, bật đèn khẩn cấp.",
+            "2. Kiểm tra áp suất lốp bằng app VinFast hoặc đồng hồ đo (nếu có).",
+            "3. Dùng bộ vá lốp khẩn cấp (fix-a-flat) nếu lốp xì nhẹ.",
+            "4. Hầu hết xe VinFast không có lốp dự phòng → gọi cứu hộ thay lốp."
+        ],
+        "warnings": "Xe điện nặng hơn xe xăng, không lái tiếp khi lốp xẹp.",
+        "when_to_call_help": "Lốp xẹp nặng hoặc không có dụng cụ vá.",
+        "bot_response_template": "Lốp xe VinFast bị xẹp ạ. Dừng xe an toàn trước rồi kiểm tra theo hướng dẫn. Xe điện thường không có lốp dự phòng, nên gọi cứu hộ VinFast nếu cần thay."
+    },
+    {
+        "id": 12,
+        "title": "Ắc quy 12V hết điện (xe không lên nguồn)",
+        "scenario": "Nhấn nút Start không phản hồi, màn hình tắt, không vào số được.",
+        "sample_user_queries": [
+            "Xe VF không lên nguồn, màn hình đen",
+            "Nhấn Start không có tiếng gì",
+            "VinFast để xe vài ngày không khởi động được"
+        ],
+        "signs": "Màn hình không sáng, không có tiếng beep, đèn nội thất yếu.",
+        "causes": "Để xe lâu (phantom drain), quên tắt phụ kiện, ắc quy 12V cũ.",
+        "steps": [
+            "1. Cắm sạc xe vào ổ 220V (sạc di động hoặc trụ sạc) ít nhất 15-30 phút.",
+            "2. Mở cửa xe rồi đóng lại vài lần.",
+            "3. Nhấn giữ nút Start 10-15 giây.",
+            "4. Nếu có: Tháo cọc âm ắc quy 12V (dùng cờ lê 10), chờ 2-3 phút rồi gắn lại (hard reset)."
+        ],
+        "warnings": "Không tự ý tháo pin cao áp. Chỉ thao tác với ắc quy 12V nếu bạn có kinh nghiệm.",
+        "when_to_call_help": "Cắm sạc 30 phút vẫn không lên nguồn.",
+        "bot_response_template": "Đây là lỗi ắc quy 12V rất phổ biến trên xe VinFast. Hãy cắm sạc ngay và thử reset theo các bước: [dán steps]."
+    },
+    {
+        "id": 13,
+        "title": "Màn hình trung tâm treo hoặc không phản hồi",
+        "scenario": "Màn hình đơ, chạm không ăn, không điều khiển được.",
+        "sample_user_queries": [
+            "Màn hình VF8 bị treo",
+            "Touchscreen VinFast không hoạt động",
+            "Xe báo lỗi phần mềm"
+        ],
+        "signs": "Màn hình đen, đơ, hiển thị lỗi lạ.",
+        "causes": "Phần mềm glitch, ắc quy 12V yếu.",
+        "steps": [
+            "1. Nhấn giữ đồng thời 2 phím ngoài cùng trên vô lăng (reset mềm) khoảng 15 giây.",
+            "2. Hoặc nhấn giữ nút âm lượng trên màn hình khoảng 30 giây.",
+            "3. Tắt xe, mở cửa – đóng cửa, chờ 2-5 phút rồi khởi động lại.",
+            "4. Cắm sạc hỗ trợ ắc quy 12V."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Reset nhiều lần vẫn treo.",
+        "bot_response_template": "Màn hình treo là lỗi hay gặp. Thử reset mềm bằng cách nhấn giữ 2 phím vô lăng 15 giây. Chi tiết đây: [dán steps]."
+    },
+    {
+        "id": 14,
+        "title": "Xe không vào số được (kẹt ở P)",
+        "scenario": "Không chuyển được số D/R/N, xe không di chuyển.",
+        "sample_user_queries": [
+            "Xe VF không vào số D",
+            "Kẹt số P trên xe điện VinFast"
+        ],
+        "signs": "Nút chuyển số không phản hồi, vẫn hiển thị P.",
+        "causes": "Ắc quy 12V yếu, lỗi phần mềm, chưa đạp phanh chân.",
+        "steps": [
+            "1. Đạp chắc phanh chân rồi nhấn nút chuyển số.",
+            "2. Tắt xe hoàn toàn, mở cửa – đóng cửa, chờ 2 phút.",
+            "3. Cắm sạc và thử reset ắc quy 12V (theo case id 12)."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Reset không thành công.",
+        "bot_response_template": "Không vào số thường do ắc quy 12V hoặc phần mềm. Hãy đạp phanh chân và thử reset xe."
+    },
+    {
+        "id": 15,
+        "title": "Lỗi sạc pin (không sạc được hoặc sạc chậm)",
+        "scenario": "Cắm súng sạc không nhận, báo lỗi, hoặc sạc rất chậm.",
+        "sample_user_queries": [
+            "Cắm sạc VinFast không vào",
+            "Xe VF sạc chậm hoặc báo lỗi sạc"
+        ],
+        "signs": "Màn hình báo “Charging Error”, phần trăm pin không tăng.",
+        "causes": "Cổng sạc bẩn, nhiệt độ pin cao, lỗi phần mềm.",
+        "steps": [
+            "1. Tắt xe trước khi cắm sạc.",
+            "2. Lau sạch cổng sạc và súng sạc.",
+            "3. Rút ra cắm lại vài lần.",
+            "4. Nếu pin nóng (>45°C), đợi 15-30 phút cho nguội rồi thử lại."
+        ],
+        "warnings": "Không cắm sạc khi cổng bị ướt hoặc hỏng.",
+        "when_to_call_help": "Thử nhiều lần và nhiều trụ vẫn lỗi.",
+        "bot_response_template": "Lỗi sạc phổ biến trên xe VinFast. Hãy lau sạch cổng sạc và thử lại theo hướng dẫn."
+    },
+    {
+        "id": 16,
+        "title": "Xe hết pin cao áp (pin chính thấp)",
+        "scenario": "Pin dưới 5-10%, xe giảm công suất mạnh hoặc không chạy.",
+        "sample_user_queries": [
+            "Xe VinFast hết pin giữa đường",
+            "Pin VF thấp quá, xe không đi nổi"
+        ],
+        "signs": "Màn hình báo Low Battery, vào chế độ giới hạn tốc độ.",
+        "causes": "Quên sạc, chạy xa hơn dự tính.",
+        "steps": [
+            "1. Bật đèn khẩn cấp, dừng xe an toàn.",
+            "2. Mở app VinFast tìm trạm sạc gần nhất.",
+            "3. Nếu có sạc di động → cắm ngay.",
+            "4. Gọi cứu hộ VinFast để mang bộ sạc khẩn cấp."
+        ],
+        "warnings": "Không cố chạy tiếp khi pin rất thấp (có thể hỏng pin).",
+        "when_to_call_help": "Cách trạm sạc xa và pin dưới 5%.",
+        "bot_response_template": "Xe hết pin cao áp rồi ạ. Dừng an toàn và tìm trạm sạc qua app VinFast. Gọi 1900 23 23 89 nếu cần cứu hộ."
+    },
+    {
+        "id": 17,
+        "title": "Lỗi hệ thống điện áp cao / BEV error",
+        "scenario": "Báo lỗi BEV, High Voltage, xe mất lực hoặc không chạy.",
+        "sample_user_queries": [
+            "Xe báo lỗi BEV VinFast",
+            "Lỗi hệ thống điện áp cao VF8"
+        ],
+        "signs": "Màn hình hiện lỗi BEV hoặc High Voltage System.",
+        "causes": "Ắc quy 12V yếu, lỗi phần mềm tạm thời.",
+        "steps": [
+            "1. Dừng xe an toàn, tắt xe hoàn toàn.",
+            "2. Mở cửa – đóng cửa, chờ 3-5 phút.",
+            "3. Thử reset ắc quy 12V (tháo cọc âm nếu có kinh nghiệm).",
+            "4. Khởi động lại xe."
+        ],
+        "warnings": "Đây là lỗi liên quan đến hệ thống cao áp → không tự sửa sâu.",
+        "when_to_call_help": "Reset không hết lỗi.",
+        "bot_response_template": "Lỗi BEV / điện áp cao khá nghiêm trọng. Hãy thử reset xe theo hướng dẫn. Nếu vẫn lỗi, gọi cứu hộ VinFast ngay."
+    },
+    {
+        "id": 18,
+        "title": "Nhiệt độ pin cao (overheating battery)",
+        "scenario": "Báo nhiệt độ pin cao, giảm công suất hoặc không sạc được.",
+        "sample_user_queries": [
+            "Xe VinFast báo nhiệt độ pin cao",
+            "Pin nóng không sạc được"
+        ],
+        "signs": "Cảnh báo nhiệt độ pin >45-60°C trên màn hình.",
+        "causes": "Sạc nhanh liên tục, thời tiết nóng, lái xe mạnh.",
+        "steps": [
+            "1. Dừng xe, tắt điều hòa nếu đang chạy.",
+            "2. Đợi 15-30 phút cho pin nguội tự nhiên.",
+            "3. Không sạc ngay khi pin còn nóng."
+        ],
+        "warnings": "Pin nóng quá có thể ảnh hưởng tuổi thọ và an toàn.",
+        "when_to_call_help": "Nhiệt độ không giảm sau 30 phút.",
+        "bot_response_template": "Nhiệt độ pin cao rồi ạ. Hãy dừng xe và đợi nguội 15-30 phút trước khi sạc hoặc chạy tiếp."
+    },
+    {
+        "id": 19,
+        "title": "Remote / khóa trung tâm không hoạt động",
+        "scenario": "Remote không khóa/mở cửa, nút bấm trong xe không phản hồi.",
+        "sample_user_queries": [
+            "Remote xe VinFast không khóa cửa",
+            "Khóa trung tâm VF lỗi"
+        ],
+        "signs": "Remote không phản hồi, không khóa/mở bằng điện.",
+        "causes": "Hết pin remote, ắc quy 12V yếu, lỗi phần mềm.",
+        "steps": [
+            "1. Thay pin remote mới (thường là CR2032).",
+            "2. Thử khóa/mở bằng chìa cơ dự phòng.",
+            "3. Reset ắc quy 12V và phần mềm xe."
+        ],
+        "warnings": "Không để xe không khóa khi rời đi.",
+        "when_to_call_help": "Thay pin và reset vẫn không được.",
+        "bot_response_template": "Remote lỗi thường do pin hoặc ắc quy 12V. Hãy thay pin remote trước và thử reset xe."
+    },
+    {
+        "id": 20,
+        "title": "Cửa sổ điện không hoạt động",
+        "scenario": "Cửa sổ không lên/xuống, có tiếng kêu lạ.",
+        "sample_user_queries": [
+            "Cửa sổ điện VF không lên",
+            "Kính xe VinFast bị kẹt"
+        ],
+        "signs": "Cửa sổ không di chuyển, tiếng kêu từ mô tơ.",
+        "causes": "Ắc quy 12V yếu, lỗi phần mềm, mô tơ tạm thời kẹt.",
+        "steps": [
+            "1. Reset ắc quy 12V bằng cách cắm sạc.",
+            "2. Thử reset phần mềm xe (mở cửa – đóng cửa hoặc nhấn nút vô lăng).",
+            "3. Kiểm tra xem các cửa khác có hoạt động không."
+        ],
+        "warnings": "Không dùng lực mạnh đẩy kính.",
+        "when_to_call_help": "Reset nhiều lần vẫn không.",
+        "bot_response_template": "Cửa sổ điện lỗi hay do ắc quy 12V. Hãy cắm sạc và reset xe theo hướng dẫn."
+    },
+    {
+        "id": 21,
+        "title": "Xe chết máy đột ngột hoặc mất lực khi đang chạy",
+        "scenario": "Xe đột ngột giảm tốc hoặc tắt nguồn giữa đường.",
+        "sample_user_queries": [
+            "Xe VinFast đang chạy tự mất lực",
+            "Xe điện VF chết máy giữa đường"
+        ],
+        "signs": "Mất lực đột ngột, màn hình báo lỗi.",
+        "causes": "Pin thấp, lỗi phần mềm, ắc quy 12V yếu.",
+        "steps": [
+            "1. Giữ tay lái chắc, bật đèn khẩn cấp, kéo xe vào lề an toàn.",
+            "2. Tắt xe, chờ 1-2 phút rồi khởi động lại.",
+            "3. Kiểm tra mức pin và thử reset xe."
+        ],
+        "warnings": "Giữ bình tĩnh và dừng xe an toàn.",
+        "when_to_call_help": "Không khởi động lại được.",
+        "bot_response_template": "Xe mất lực đột ngột rất nguy hiểm. Dừng an toàn trước, sau đó thử reset và kiểm tra pin."
+    },
+    {
+        "id": 22,
+        "title": "Lỗi phanh tái tạo (Regen braking) hoặc phanh lạ",
+        "scenario": "Phanh tái tạo không hoạt động, xe trôi hoặc phanh yếu.",
+        "sample_user_queries": [
+            "Phanh tái tạo xe VinFast không ăn",
+            "Xe điện phanh lạ khi thả ga"
+        ],
+        "signs": "Không có cảm giác hãm khi thả ga, đèn phanh hoạt động bất thường.",
+        "causes": "Cài đặt regen ở mức thấp, lỗi phần mềm, ắc quy 12V yếu.",
+        "steps": [
+            "1. Kiểm tra cài đặt mức regen braking trong màn hình xe.",
+            "2. Thử reset phần mềm xe.",
+            "3. Đạp phanh chân thử nhiều lần."
+        ],
+        "warnings": "Luôn giữ khoảng cách an toàn khi lái.",
+        "when_to_call_help": "Phanh có dấu hiệu bất thường.",
+        "bot_response_template": "Phanh tái tạo lỗi có thể do cài đặt hoặc phần mềm. Hãy kiểm tra mức regen và reset xe."
+    },
+    {
+        "id": 23,
+        "title": "Cụm đồng hồ / bảng điều khiển không hoạt động",
+        "scenario": "Đồng hồ tốc độ, thông tin pin, đèn báo không hiển thị.",
+        "sample_user_queries": [
+            "Taplo xe VinFast không sáng",
+            "Thông tin pin trên màn hình bị lỗi"
+        ],
+        "signs": "Toàn bộ hoặc một phần bảng điều khiển tắt.",
+        "causes": "Lỗi phần mềm, ắc quy 12V.",
+        "steps": [
+            "1. Thực hiện reset màn hình (nhấn nút vô lăng hoặc âm lượng).",
+            "2. Cắm sạc hỗ trợ ắc quy 12V.",
+            "3. Tắt xe và chờ vài phút."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Reset không khắc phục được.",
+        "bot_response_template": "Cụm đồng hồ lỗi thường do phần mềm. Thử reset màn hình trước nhé."
+    },
+    {
+        "id": 24,
+        "title": "Hệ thống âm thanh / loa không hoạt động",
+        "scenario": "Không có tiếng, âm thanh rè hoặc chỉ một số loa chạy.",
+        "sample_user_queries": [
+            "Loa xe VinFast không có tiếng",
+            "Radio VF bị rè"
+        ],
+        "signs": "Không phát nhạc, âm thanh rè.",
+        "causes": "Lỗi phần mềm, ắc quy 12V yếu.",
+        "steps": [
+            "1. Reset phần mềm xe.",
+            "2. Tắt/bật hệ thống âm thanh.",
+            "3. Cắm sạc ắc quy 12V."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Vẫn không có tiếng sau reset.",
+        "bot_response_template": "Hệ thống âm thanh lỗi hay gặp trên xe điện. Hãy thử reset xe và kiểm tra lại."
+    },
+    {
+        "id": 25,
+        "title": "Cảm biến hỗ trợ lái (ADAS) báo lỗi",
+        "scenario": "Cảnh báo lane assist, AEB, radar phía sau liên tục.",
+        "sample_user_queries": [
+            "Xe VinFast báo lỗi cảm biến",
+            "Lane assist VF kêu liên tục"
+        ],
+        "signs": "Đèn cảnh báo ADAS sáng, tiếng kêu cảnh báo.",
+        "causes": "Cảm biến bẩn, lỗi phần mềm, ắc quy 12V yếu.",
+        "steps": [
+            "1. Lau sạch cảm biến camera và radar (thường ở kính chắn gió, cản sau).",
+            "2. Reset phần mềm xe.",
+            "3. Chạy xe ở đường sạch sẽ thử lại."
+        ],
+        "warnings": "Không tắt các hệ thống an toàn nếu không cần thiết.",
+        "when_to_call_help": "Lỗi vẫn còn sau khi lau và reset.",
+        "bot_response_template": "Lỗi cảm biến hỗ trợ lái thường do bẩn hoặc phần mềm. Hãy lau sạch cảm biến và reset xe."
+    },
+    {
+        "id": 26,
+        "title": "Xe không khóa/mở cửa bằng remote",
+        "scenario": "Remote hết tác dụng, phải dùng chìa cơ.",
+        "sample_user_queries": [
+            "Remote VF không mở cửa",
+            "Khóa xe VinFast không hoạt động"
+        ],
+        "signs": "Remote không phản hồi.",
+        "causes": "Hết pin remote hoặc lỗi ăng-ten.",
+        "steps": [
+            "1. Thay pin remote (CR2032).",
+            "2. Đưa remote sát vào nút Start và thử.",
+            "3. Reset xe toàn bộ."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Thay pin vẫn không được.",
+        "bot_response_template": "Remote hết pin là nguyên nhân phổ biến. Thay pin mới và thử lại."
+    },
+    {
+        "id": 27,
+        "title": "Lỗi kết nối app VinFast",
+        "scenario": "Không kết nối được điện thoại với xe qua app.",
+        "sample_user_queries": [
+            "App VinFast không kết nối xe",
+            "Không điều khiển xe từ xa được"
+        ],
+        "signs": "App báo lỗi kết nối.",
+        "causes": "Bluetooth/WiFi lỗi, phần mềm xe hoặc app.",
+        "steps": [
+            "1. Tắt Bluetooth/WiFi trên điện thoại rồi bật lại.",
+            "2. Reset phần mềm xe.",
+            "3. Cập nhật app VinFast mới nhất."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Vẫn không kết nối sau reset.",
+        "bot_response_template": "Lỗi kết nối app thường dễ fix. Hãy reset Bluetooth và phần mềm xe."
+    },
+    {
+        "id": 28,
+        "title": "Tiếng kêu lạ từ động cơ điện hoặc hệ thống",
+        "scenario": "Có tiếng kêu ken két, ù ù khi chạy hoặc tăng tốc.",
+        "sample_user_queries": [
+            "Xe VinFast có tiếng kêu lạ",
+            "Động cơ điện VF kêu rè"
+        ],
+        "signs": "Tiếng kêu từ động cơ điện hoặc bánh xe.",
+        "causes": "Lốp, phanh, hoặc lỗi phần cứng nhẹ.",
+        "steps": [
+            "1. Kiểm tra lốp và áp suất.",
+            "2. Quan sát khi nào tiếng kêu xuất hiện (khi tăng tốc, phanh…)",
+            "3. Reset xe thử."
+        ],
+        "warnings": "Nếu tiếng kêu to và liên tục → dừng xe kiểm tra.",
+        "when_to_call_help": "Tiếng kêu lớn và ảnh hưởng vận hành.",
+        "bot_response_template": "Tiếng kêu lạ cần mô tả rõ hơn (khi nào xuất hiện). Trước tiên kiểm tra lốp và thử reset xe."
+    },
+    {
+        "id": 29,
+        "title": "Xe báo lỗi nhiều hệ thống cùng lúc",
+        "scenario": "Nhiều đèn báo lỗi xuất hiện đồng thời.",
+        "sample_user_queries": [
+            "Xe VF báo nhiều lỗi cùng lúc",
+            "Lỗi lan tỏa trên VinFast"
+        ],
+        "signs": "Nhiều cảnh báo hiện lên màn hình.",
+        "causes": "Ắc quy 12V yếu là nguyên nhân chính.",
+        "steps": [
+            "1. Cắm sạc xe ngay lập tức.",
+            "2. Thực hiện hard reset ắc quy 12V nếu cần.",
+            "3. Khởi động lại xe sau khi sạc."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Sau khi sạc và reset vẫn còn nhiều lỗi.",
+        "bot_response_template": "Khi báo nhiều lỗi cùng lúc, hầu hết là do ắc quy 12V yếu. Hãy cắm sạc và reset theo hướng dẫn."
+    },
+    {
+        "id": 30,
+        "title": "Hệ thống phanh khẩn cấp tự động (AEB) báo lỗi",
+        "scenario": "AEB kích hoạt sai hoặc không hoạt động.",
+        "sample_user_queries": [
+            "AEB xe VinFast báo lỗi",
+            "Phanh tự động kích hoạt sai"
+        ],
+        "signs": "Cảnh báo AEB liên tục.",
+        "causes": "Cảm biến bẩn, lỗi phần mềm.",
+        "steps": [
+            "1. Lau sạch camera và radar phía trước.",
+            "2. Reset phần mềm xe.",
+            "3. Chạy thử trên đường sạch."
+        ],
+        "warnings": "Không tắt AEB nếu đường đông đúc.",
+        "when_to_call_help": "Lỗi vẫn tồn tại.",
+        "bot_response_template": "Lỗi AEB thường do cảm biến bẩn. Hãy lau sạch và reset xe trước."
+    },
+    {
+        "id": 31,
+        "title": "Camera 360 độ hoặc camera lùi không hoạt động",
+        "scenario": "Camera sau hoặc camera 360 không hiển thị hình ảnh khi vào số R hoặc nhấn nút camera.",
+        "sample_user_queries": [
+            "Camera lùi VF8 không hiện hình",
+            "Camera 360 xe VinFast bị lỗi",
+            "Hình ảnh camera nhiễu hoặc tắt"
+        ],
+        "signs": "Màn hình không hiện camera, hình ảnh nhiễu, camera tắt đột ngột.",
+        "causes": "Lỗi phần mềm tạm thời, ắc quy 12V yếu, camera bẩn.",
+        "steps": [
+            "1. Tắt xe hoàn toàn, mở cửa rồi đóng lại, chờ 2-3 phút.",
+            "2. Lau sạch lens camera (phía sau và xung quanh xe).",
+            "3. Cắm sạc xe để hỗ trợ ắc quy 12V.",
+            "4. Thử reset mềm: Nhấn giữ nút âm lượng hoặc 2 phím trên vô lăng khoảng 15 giây."
+        ],
+        "warnings": "Không lau camera khi xe đang chạy.",
+        "when_to_call_help": "Reset và lau sạch vẫn không hiện hình.",
+        "bot_response_template": "Camera 360 hoặc camera lùi lỗi khá phổ biến trên xe VinFast. Hãy lau sạch lens và thử reset xe theo các bước sau: [dán steps]."
+    },
+    {
+        "id": 32,
+        "title": "Hệ thống ADAS (hỗ trợ lái) báo lỗi liên tục",
+        "scenario": "Lane keep assist, adaptive cruise, blind spot báo lỗi hoặc kích hoạt sai.",
+        "sample_user_queries": [
+            "ADAS xe VF báo lỗi",
+            "Lane assist VinFast kêu liên tục",
+            "Blind spot detection không hoạt động"
+        ],
+        "signs": "Đèn cảnh báo ADAS sáng, tiếng kêu cảnh báo, hệ thống tự tắt.",
+        "causes": "Cảm biến/radar bẩn, lỗi phần mềm, ắc quy 12V yếu.",
+        "steps": [
+            "1. Lau sạch camera trước kính chắn gió và radar ở cản trước/sau.",
+            "2. Reset phần mềm xe (nhấn giữ nút vô lăng hoặc âm lượng).",
+            "3. Cắm sạc hỗ trợ ắc quy 12V.",
+            "4. Chạy thử trên đường sạch, thẳng."
+        ],
+        "warnings": "Không tắt ADAS khi lái trên cao tốc hoặc đường đông.",
+        "when_to_call_help": "Lỗi vẫn tồn tại sau khi lau và reset.",
+        "bot_response_template": "Lỗi ADAS thường do cảm biến bẩn hoặc phần mềm. Hãy lau sạch camera/radar trước rồi reset xe."
+    },
+    {
+        "id": 33,
+        "title": "Đèn xi-nhan / đèn pha tự động tắt hoặc nháy lạ",
+        "scenario": "Đèn xi-nhan nháy nhanh, tự tắt, hoặc đèn pha không sáng đúng.",
+        "sample_user_queries": [
+            "Đèn xi nhan VF nháy nhanh",
+            "Đèn pha xe VinFast tự tắt",
+            "Xi nhan không hoạt động"
+        ],
+        "signs": "Đèn nháy không đều, tự tắt khi đang bật.",
+        "causes": "Lỗi phần mềm, ắc quy 12V yếu.",
+        "steps": [
+            "1. Tắt xe, chờ 2 phút rồi khởi động lại.",
+            "2. Reset mềm màn hình (nhấn nút âm lượng hoặc phím vô lăng).",
+            "3. Cắm sạc xe để ổn định nguồn 12V."
+        ],
+        "warnings": "Không lái xe nếu đèn xi-nhan không hoạt động.",
+        "when_to_call_help": "Reset nhiều lần vẫn lỗi.",
+        "bot_response_template": "Đèn xi-nhan hoặc pha lỗi thường do phần mềm. Thử reset xe và cắm sạc trước nhé."
+    },
+    {
+        "id": 34,
+        "title": "Cài đặt xe tự reset hoặc không lưu được",
+        "scenario": "Cài đặt ghế, gương, regen braking, điều hòa bị mất sau khi tắt xe.",
+        "sample_user_queries": [
+            "Cài đặt xe VinFast tự reset",
+            "Không lưu được mức regen braking"
+        ],
+        "signs": "Cài đặt cá nhân hóa bị mất mỗi lần khởi động.",
+        "causes": "Lỗi phần mềm, ắc quy 12V không ổn định.",
+        "steps": [
+            "1. Cắm sạc xe ít nhất 30 phút.",
+            "2. Reset phần mềm xe.",
+            "3. Thiết lập lại cài đặt sau khi reset."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Vẫn bị reset sau nhiều lần thử.",
+        "bot_response_template": "Cài đặt tự reset là lỗi phần mềm phổ biến. Cắm sạc và reset xe sẽ giúp ổn định hơn."
+    },
+    {
+        "id": 35,
+        "title": "Tiếng kêu lạ từ phanh hoặc hệ thống treo",
+        "scenario": "Tiếng ken két, rít hoặc ù ù khi phanh, tăng tốc hoặc đi qua ổ gà.",
+        "sample_user_queries": [
+            "Xe VinFast có tiếng kêu lạ từ phanh",
+            "Tiếng rè từ bánh xe VF"
+        ],
+        "signs": "Tiếng kêu khi phanh tái tạo hoặc đi chậm.",
+        "causes": "Má phanh mới (cần chạy rà), cảm biến bẩn, hoặc lỗi phần mềm.",
+        "steps": [
+            "1. Quan sát tiếng kêu xuất hiện khi nào (phanh, tăng tốc…).",
+            "2. Lau sạch cảm biến gần bánh xe nếu có thể.",
+            "3. Reset xe và chạy thử ở tốc độ thấp.",
+            "4. Nếu má phanh mới: Chạy rà nhẹ nhàng 200-300km."
+        ],
+        "warnings": "Nếu tiếng kêu to và liên tục → dừng xe kiểm tra.",
+        "when_to_call_help": "Tiếng kêu lớn, ảnh hưởng an toàn.",
+        "bot_response_template": "Tiếng kêu lạ cần mô tả rõ (khi nào nghe thấy). Thường do má phanh mới hoặc cảm biến – thử reset trước."
+    },
+    {
+        "id": 36,
+        "title": "Cổng sạc không mở hoặc khóa súng sạc không nhả",
+        "scenario": "Cổng sạc không mở tự động, súng sạc bị kẹt sau khi sạc xong.",
+        "sample_user_queries": [
+            "Cổng sạc VF không mở",
+            "Súng sạc bị kẹt không rút ra được"
+        ],
+        "signs": "Cổng sạc không pop-up, súng không nhả.",
+        "causes": "Lỗi phần mềm, ắc quy 12V yếu, cơ cấu cơ khí tạm kẹt.",
+        "steps": [
+            "1. Tắt xe hoàn toàn rồi mở lại.",
+            "2. Nhấn nút mở cổng sạc nhiều lần.",
+            "3. Cắm sạc 12V và thử reset xe.",
+            "4. Nếu kẹt: Nhẹ nhàng kéo súng theo hướng thẳng, không dùng lực mạnh."
+        ],
+        "warnings": "Không kéo mạnh súng sạc để tránh hỏng.",
+        "when_to_call_help": "Vẫn kẹt sau reset.",
+        "bot_response_template": "Cổng sạc hoặc súng kẹt là lỗi hay gặp. Hãy thử reset xe và cắm sạc trước."
+    },
+    {
+        "id": 37,
+        "title": "Màn hình khởi động lại liên tục hoặc đen thui",
+        "scenario": "Màn hình tự restart nhiều lần hoặc tắt đen khi đang lái.",
+        "sample_user_queries": [
+            "Màn hình VF8 tự restart",
+            "Màn hình xe VinFast bị đen"
+        ],
+        "signs": "Màn hình nhấp nháy, khởi động lại, hoặc tắt hoàn toàn.",
+        "causes": "Ắc quy 12V yếu, lỗi phần mềm.",
+        "steps": [
+            "1. Nhấn giữ nút âm lượng (hoặc 2 phím ngoài cùng vô lăng) 15-30 giây để reset mềm.",
+            "2. Tắt xe, mở cửa – đóng cửa, chờ 5 phút.",
+            "3. Cắm sạc xe ngay lập tức."
+        ],
+        "warnings": "",
+        "when_to_call_help": "Reset nhiều lần vẫn bị.",
+        "bot_response_template": "Màn hình khởi động lại liên tục thường do ắc quy 12V. Hãy reset mềm và cắm sạc theo hướng dẫn."
+    },
+    {
+        "id": 38,
+        "title": "Hệ thống sưởi ấm (heater) không nóng hoặc yếu",
+        "scenario": "Điều hòa sưởi không ra gió nóng, đặc biệt thời tiết lạnh.",
+        "sample_user_queries": [
+            "Sưởi ấm xe VinFast không nóng",
+            "Heater VF8 chỉ nóng khi để max"
+        ],
+        "signs": "Gió thổi nhưng không nóng, phải để nhiệt độ cao mới ấm.",
+        "causes": "Cài đặt phần mềm, ắc quy 12V yếu, pin chính thấp.",
+        "steps": [
+            "1. Đặt nhiệt độ sưởi ở mức cao (28-30°C) và quạt max một lúc.",
+            "2. Cắm sạc xe để hỗ trợ nguồn.",
+            "3. Reset phần mềm xe.",
+            "4. Kiểm tra pin chính (nếu pin thấp, hệ thống giảm công suất sưởi)."
+        ],
+        "warnings": "Sưởi ấm xe điện tiêu hao pin khá nhiều.",
+        "when_to_call_help": "Vẫn không nóng sau reset.",
+        "bot_response_template": "Hệ thống sưởi yếu thường do phần mềm hoặc pin thấp. Hãy thử đặt nhiệt độ cao và reset xe."
+    },
+    {
+        "id": 39,
+        "title": "Xe tự lăn bánh nhẹ khi dừng (creep torque mạnh)",
+        "scenario": "Xe tự di chuyển về phía trước khi thả phanh ở chế độ D.",
+        "sample_user_queries": [
+            "Xe VinFast tự lăn khi dừng",
+            "Creep torque VF8 quá mạnh"
+        ],
+        "signs": "Xe creep mạnh hơn bình thường, khó dừng yên.",
+        "causes": "Cài đặt chế độ lái hoặc phần mềm.",
+        "steps": [
+            "1. Vào menu cài đặt → Driving → điều chỉnh mức Creep Torque xuống thấp hơn.",
+            "2. Bật Auto Hold (nếu có) để giữ xe khi dừng.",
+            "3. Reset phần mềm xe nếu cài đặt không lưu."
+        ],
+        "warnings": "Luôn đạp phanh chân khi dừng ở dốc.",
+        "when_to_call_help": "Không điều chỉnh được creep.",
+        "bot_response_template": "Creep torque mạnh là đặc điểm của một số xe VinFast. Bạn có thể giảm mức creep trong cài đặt lái xe."
+    },
+    {
+        "id": 40,
+        "title": "Xe báo lỗi nhiều hệ thống cùng lúc (EV fault, drive system fault…)",
+        "scenario": "Nhiều lỗi hiện lên màn hình (BEV, drive system, battery fault…).",
+        "sample_user_queries": [
+            "Xe VF báo nhiều lỗi cùng lúc",
+            "EV fault và drive system fault"
+        ],
+        "signs": "Nhiều cảnh báo xuất hiện, xe giảm công suất hoặc không vào số.",
+        "causes": "Ắc quy 12V yếu là nguyên nhân chính (gây lỗi lan tỏa).",
+        "steps": [
+            "1. Dừng xe an toàn, tắt xe hoàn toàn.",
+            "2. Cắm sạc xe ngay (sạc di động hoặc trụ sạc).",
+            "3. Thực hiện reset mềm (nhấn nút âm lượng hoặc phím vô lăng).",
+            "4. Chờ 5-10 phút sau khi sạc rồi thử khởi động lại."
+        ],
+        "warnings": "Đây là lỗi nghiêm trọng → ưu tiên gọi cứu hộ nếu xe không chạy được.",
+        "when_to_call_help": "Sau khi sạc và reset vẫn còn nhiều lỗi.",
+        "bot_response_template": "Nhiều lỗi cùng lúc thường do ắc quy 12V yếu. Hãy cắm sạc ngay và reset xe. Nếu vẫn không được, gọi hotline cứu hộ VinFast 1900 23 23 89 nhé!"
+    }
+]

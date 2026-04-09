@@ -1,0 +1,72 @@
+[
+  {
+    "id": "KB001",
+    "issue": "Hết pin giữa đường",
+    "keywords": ["hết pin", "pin yếu", "không đủ pin", "battery low", "sắp hết pin"],
+    "guide": "1. Bật chế độ tiết kiệm pin (Eco Mode) trên màn hình trung tâm.\n2. Tắt điều hòa và các thiết bị không cần thiết.\n3. Giảm tốc độ xuống dưới 60km/h.\n4. Kiểm tra bản đồ tìm trạm sạc gần nhất.\n5. Nếu pin dưới 5%, dừng xe an toàn ven đường và gọi cứu hộ.",
+    "severity": "medium"
+  },
+  {
+    "id": "KB002",
+    "issue": "Đèn cảnh báo lỗi động cơ",
+    "keywords": ["đèn cảnh báo", "engine warning", "check engine", "đèn vàng", "đèn lỗi"],
+    "guide": "1. Không hoảng loạn — đèn cảnh báo vàng không yêu cầu dừng ngay.\n2. Giảm tốc độ và tránh tăng tốc đột ngột.\n3. Kiểm tra nhiệt độ động cơ trên bảng điều khiển.\n4. Đến trạm bảo hành gần nhất trong ngày.\n5. Nếu đèn đỏ: DỪNG XE NGAY ở nơi an toàn, gọi cứu hộ.",
+    "severity": "medium"
+  },
+  {
+    "id": "KB003",
+    "issue": "Thủng lốp / xẹp lốp",
+    "keywords": ["thủng lốp", "xẹp lốp", "lốp bể", "flat tire", "lốp non"],
+    "guide": "1. Từ từ giảm tốc độ, KHÔNG phanh gấp.\n2. Bật đèn cảnh báo (hazard) và dừng ở nơi an toàn.\n3. Đặt tam giác cảnh báo cách xe 50m.\n4. Nếu có bộ vá lốp khẩn cấp trong cốp: dùng theo hướng dẫn.\n5. Nếu không có: gọi cứu hộ hoặc đến tiệm lốp gần nhất.",
+    "severity": "low"
+  },
+  {
+    "id": "KB004",
+    "issue": "Xe không khởi động được",
+    "keywords": ["không khởi động", "không nổ máy", "không start", "không đề được", "máy không nổ"],
+    "guide": "1. Kiểm tra chìa khóa/remote key có pin không.\n2. Đảm bảo đạp phanh khi nhấn nút Start.\n3. Kiểm tra cần số ở vị trí P (Park).\n4. Nếu ắc quy 12V yếu: thử câu bình từ xe khác.\n5. Nếu vẫn không được: gọi cứu hộ VinFast.",
+    "severity": "medium"
+  },
+  {
+    "id": "KB005",
+    "issue": "Điều hòa không hoạt động",
+    "keywords": ["điều hòa", "AC", "máy lạnh", "không mát", "air conditioning"],
+    "guide": "1. Kiểm tra mức gas điều hòa trên màn hình (nếu có).\n2. Tắt và bật lại điều hòa.\n3. Kiểm tra cửa gió có bị chặn không.\n4. Nếu vẫn không mát: đặt lịch bảo hành, không ảnh hưởng an toàn lái xe.\n5. Mở cửa sổ để thông gió tạm thời.",
+    "severity": "low"
+  },
+  {
+    "id": "KB006",
+    "issue": "Tai nạn / va chạm",
+    "keywords": ["tai nạn", "va chạm", "đâm", "crash", "accident", "bị đụng"],
+    "guide": "1. GIỮ BÌNH TĨNH. Kiểm tra tình trạng người trên xe.\n2. Bật đèn hazard, đặt tam giác cảnh báo.\n3. Gọi 113 (công an) nếu có thương tích.\n4. KHÔNG di chuyển xe nếu có người bị thương.\n5. Chụp ảnh hiện trường trước khi di chuyển bất cứ thứ gì.\n6. Gọi cứu hộ VinFast: 1900-23-23-89.",
+    "severity": "critical"
+  },
+  {
+    "id": "KB007",
+    "issue": "Lỗi hệ thống treo / giảm xóc",
+    "keywords": ["giảm xóc", "hệ thống treo", "suspension", "rung lắc", "xóc nhiều"],
+    "guide": "1. Giảm tốc độ, đặc biệt khi qua ổ gà.\n2. Tránh đường xấu nếu có thể.\n3. Kiểm tra trực quan lốp xe có bị lệch không.\n4. Đến trạm bảo hành trong ngày để kiểm tra.\n5. Nếu xe rung lắc mạnh: DỪNG lái, gọi cứu hộ.",
+    "severity": "medium"
+  },
+  {
+    "id": "KB008",
+    "issue": "Màn hình trung tâm bị treo / lỗi",
+    "keywords": ["màn hình", "screen", "treo máy", "đơ", "không phản hồi", "touchscreen"],
+    "guide": "1. Nhấn giữ nút nguồn màn hình 10 giây để reset.\n2. Nếu không có nút: tắt xe, đợi 2 phút, khởi động lại.\n3. Các chức năng lái vẫn hoạt động bình thường khi màn hình lỗi.\n4. Đặt lịch bảo hành để cập nhật phần mềm.\n5. Lưu ý: mất màn hình không ảnh hưởng phanh/lái/an toàn.",
+    "severity": "low"
+  },
+  {
+    "id": "KB009",
+    "issue": "Sạc không vào / sạc chậm bất thường",
+    "keywords": ["sạc không vào", "không sạc được", "sạc chậm", "charging error", "lỗi sạc"],
+    "guide": "1. Kiểm tra cáp sạc có kết nối chắc chắn không.\n2. Thử rút ra và cắm lại.\n3. Kiểm tra ổ cắm/trạm sạc có hoạt động không (thử ổ khác).\n4. Nếu dùng sạc tại nhà: kiểm tra aptomat có bị nhảy không.\n5. Nếu vẫn lỗi: liên hệ hotline 1900-23-23-89.",
+    "severity": "low"
+  },
+  {
+    "id": "KB010",
+    "issue": "Phanh có tiếng kêu / phanh yếu",
+    "keywords": ["phanh", "brake", "tiếng kêu", "phanh yếu", "phanh không ăn"],
+    "guide": "1. ĐÂY LÀ VẤN ĐỀ AN TOÀN — cần xử lý ngay.\n2. Giảm tốc độ và giữ khoảng cách an toàn lớn hơn.\n3. Tránh phanh gấp.\n4. Đến trạm bảo hành GẦN NHẤT ngay lập tức.\n5. Nếu phanh không ăn: dùng phanh tay từ từ, dừng xe an toàn, gọi cứu hộ.",
+    "severity": "high"
+  }
+]
