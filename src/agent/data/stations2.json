@@ -1,0 +1,57 @@
+[
+  {
+    "id": "SC_HN_01",
+    "name": "VinFast Smart City Tây Mỗ",
+    "address": "Tây Mỗ, Nam Từ Liêm, Hà Nội",
+    "lat": 21.008945,
+    "lon": 105.750312,
+    "type": [
+      "cứu hộ",
+      "sạc",
+      "bảo hành"
+    ],
+    "phone": "1900-23-23-89",
+    "hours": "08:00 - 20:00"
+  },
+  {
+    "id": "SC_HN_02",
+    "name": "VinFast Ocean Park",
+    "address": "Gia Lâm, Hà Nội",
+    "lat": 21.011234,
+    "lon": 105.942135,
+    "type": [
+      "cứu hộ",
+      "sạc",
+      "bảo hành"
+    ],
+    "phone": "1900-23-23-89",
+    "hours": "08:00 - 20:00"
+  },
+  {
+    "id": "SC_HCM_01",
+    "name": "VinFast Thảo Điền",
+    "address": "Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
+    "lat": 10.804021,
+    "lon": 106.738014,
+    "type": [
+      "cứu hộ",
+      "bảo hành"
+    ],
+    "phone": "1900-23-23-89",
+    "hours": "08:00 - 20:00"
+  },
+  {
+    "id": "SC_DN_01",
+    "name": "VinFast Hải Châu",
+    "address": "Hải Châu, Đà Nẵng",
+    "lat": 16.054407,
+    "lon": 108.202166,
+    "type": [
+      "cứu hộ",
+      "sạc",
+      "bảo hành"
+    ],
+    "phone": "1900-23-23-89",
+    "hours": "08:00 - 20:00"
+  }
+]
