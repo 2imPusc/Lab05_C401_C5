@@ -30,7 +30,7 @@ st.set_page_config(
 st.markdown("""
 <style>
     .stApp {
-        max-width: 800px;
+        max-width: 100%;
         margin: 0 auto;
     }
     .block-container {
