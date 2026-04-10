@@ -1,6 +1,6 @@
 →
 
-# Prototype — AI triage Vinmec
+# Prototype — Hệ thống hỗ trợ cứu hộ cho xe điện VinFast
 
 ## Mô tả
 
